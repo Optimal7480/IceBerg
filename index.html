@@ -1,20 +1,54 @@
-<h1>IceBerg</h1>
-<style>
-h1 {text-align: center;}
-p {text-align: center;}
-div {text-align: center;}
-</style>
-  <a href="Proxy.html"><img src="https://st2.depositphotos.com/1063116/5632/v/450/depositphotos_56324557-stock-illustration-iceberg-concept-illustration.jpg" alt="Tutorialspoint" style="width:150px;height:150px;"></a> 
+<SCRIPT>
+function passWord() {
+var testV = 1;
+var pass1 = prompt('Please Enter Your Password',' ');
+while (testV < 3) {
+if (!pass1)
+history.go(-1);
+if (pass1.toLowerCase() == "glizzy") {
+alert('You Got it Right!');
+openInNewTab(window.location.origin + "/games.html")
+break;
+}
+testV+=1;
+var pass1 =
+prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
+}
+if (pass1.toLowerCase()!="password" & testV ==3)
+history.go(-1);
+return " ";
+}
+</SCRIPT>
+<CENTER>
+<FORM>
+<input type="button" value="Enter Protected Area" onClick="passWord()">
+</FORM>
+</CENTER>
 
+<SCRIPT>
+function openInNewTab(url) {
+  win = window.open();
+  win.document.body.style.margin = '0';
+  win.document.body.style.height = '100vh';
 
- <a href="MotoX3M.html"><img src="https://classwork.cc/wp-content/uploads/2022/09/MotoX3MSquare-150x150.webp" alt="Tutorialspoint" style="width:150px;height:150px;"></a> 
+  var icon = win.document.createElement('link')
+  icon.rel = "shortcut icon"
+  icon.href = window.location.origin+"/icon.png"
+  icon.type = "image/png"
+  win.document.head.appendChild(icon)
+  
+  var title = win.document.createElement('title')
+  title.innerText = "IceBerg"
+  win.document.head.appendChild(title)
 
+  var iframe = win.document.createElement('iframe');
+  iframe.style.border = 'none';
+  iframe.style.width = '100%';
+  iframe.style.height = '100%';
+  iframe.style.margin = '0';
+  iframe.id = 'content';
+  iframe.src = url;
+  win.document.body.appendChild(iframe);
 
-
-  <a href="Slope.html"><img src="https://classwork.cc/wp-content/uploads/2022/09/SlopeSquare-150x150.webp" alt="Tutorialspoint" style="width:150px;height:150px;"></a> 
-
-
-   <a href="Retrobowl.html"><img src="https://geometryspot.com/wp-content/uploads/2023/02/RetroSquare-150x150.webp" alt="Tutorialspoint" style="width:150px;height:150px;"></a> 
-
-
-   
+}
+</SCRIPT>
